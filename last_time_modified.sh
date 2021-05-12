@@ -1,6 +1,6 @@
 #!/bin/bash
 
-LAST_MODIFIED_CONFIG=$(grep -e '.*' .last_modified_config)
+LAST_MODIFIED_CONFIG=$(grep -s -e '.*' .last_modified_config)
 CURRENT_MODIFIED_CONFIG=$(date -r .config +%s)
 DIFF=$(echo "$LAST_MODIFIED_CONFIG - $CURRENT_MODIFIED_CONFIG" | bc)
 if [ "$DIFF" -lt "0" ]; then
