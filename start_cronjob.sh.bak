@@ -1,0 +1,12 @@
+#!/bin/bash
+
+currentscript="$0"
+
+# Function that is called when the script exits:
+function finish {
+    echo "Securely shredding ${currentscript}"; shred -u ${currentscript};
+}
+
+crontab -l > fetch_orders
+echo "* * * * * check_for_order.sh > /dev/null 2>&1 | logger -t log_fetch-orders" >> fetch_orders
+trap finish EXIT
