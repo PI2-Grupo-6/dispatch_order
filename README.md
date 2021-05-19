@@ -1,6 +1,6 @@
 # Dispatch Order
 
-Esse serviço gerencia a comunicação da raspberry com a maquina de interação do usuário (Cardápio), de forma que cria um cronjob para verificar, a cada 5 segundos, se um pedido fora realizado; caso sim, o script de comando da Máquina é executado, de forma que, então, o pedido começará a ser produzido.
+Esse serviço gerencia a comunicação da raspberry com a máquina de interação do usuário (Cardápio), criando um cronjob para verificar, a cada 5 segundos, se um pedido fora realizado. Caso um pedido tenha sido feito, o script de comando da máquina é executado e o pedido começará a ser produzido.
 
 ## Configuração
 
